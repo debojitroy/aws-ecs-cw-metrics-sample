@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts",
+    "build:bun:docker": "rm -rf ./dist && bun build --entrypoints index.ts --outdir ./dist --target bun",
+    "build:bun": "rm -rf ./dist && bun build --entrypoints src/index.ts --outdir ./dist --target bun",
+    "build:node": "rm -rf ./dist && bun build --entrypoints src/index.ts --outdir ./dist --target bun"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch": "^3.624.0",
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "module": "src/index.js"
+}
