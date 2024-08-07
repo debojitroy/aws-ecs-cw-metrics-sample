@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git clone the repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v1.7.0
+        uses: aws-actions/configure-aws-credentials@v4
         env:
           aws_role: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           aws_region: ${{ vars.AWS_REGION_VAR }}
