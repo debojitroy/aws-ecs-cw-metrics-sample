@@ -18,10 +18,11 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1.7.0
         env:
           aws_role: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws_region: ${{ env.AWS_REGION }}
         with:
             role-to-assume: ${{ env.aws_role }}
             role-session-name: GitHub_to_AWS_via_FederatedOIDC
-            aws-region: ${{ env.AWS_REGION }}
+            aws-region: ${{ env.aws_region }}
       - name: Sts GetCallerIdentity
         run: |
             aws sts get-caller-identity
