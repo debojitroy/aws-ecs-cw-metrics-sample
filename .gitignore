@@ -137,3 +137,6 @@ dist
 
 app/dist
 /app/dist/index.js
+
+.venv
+/loadtesting/.venv/
