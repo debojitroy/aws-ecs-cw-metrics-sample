@@ -1,7 +1,7 @@
 import {CloudWatchClient, PutMetricDataCommand, StandardUnit} from "@aws-sdk/client-cloudwatch";
 import { Elysia } from "elysia";
 
-// throw new Error("Random Error");
+throw new Error("Random Error");
 
 export interface MetricValue {
     metricName: string;
